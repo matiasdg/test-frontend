@@ -23,7 +23,9 @@ export default class Main extends Component {
     }
     this.formSubmission = this.formSubmission.bind(this)
   }
-  async formSubmission (data) {}
+  async formSubmission (data) {
+    this.store.appState.authenticate(data.email, data.password)
+  }
   render () {
     const { retrieving } = this.state
     return <Container text>
