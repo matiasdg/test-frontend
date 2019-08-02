@@ -1,0 +1,62 @@
+$positive-button-color: #47a678;
+
+
+.wrapper{
+  background-color: #f8f9fa;
+
+  .container{
+    &.full-height{
+      height: 100vh;
+
+      .grid{
+        height: 100%;
+
+        .form{
+          .link-container{
+            margin: 0 0 1em;
+          }
+        }
+
+        label{
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  //Override global semantic styles
+
+  .button{
+    &.positive {
+      background-color: $positive-button-color;
+      box-shadow: 1px 1px 5px 1px #297651;
+
+      &:active, &:hover{
+        background-color: #3c8e67;
+      }
+    }
+  }
+
+  .ui.form .required.field > .checkbox:after, .ui.form .required.field > label:after,
+  .ui.form .required.fields.grouped > label:after, .ui.form .required.fields:not(.grouped) > .field > .checkbox:after,
+  .ui.form .required.fields:not(.grouped) > .field > label:after {
+    color: #b4bcc4;
+    content: ' - REQUIRED';
+    margin:0;
+  }
+
+  h1.ui.header {
+
+    & .sub.header {
+      font-size: 0.9rem;
+    }
+
+    @media only screen and (max-width: 767px){
+      text-align: center;
+    }
+
+  }
+
+}
+
+
