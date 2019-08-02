@@ -10,6 +10,7 @@ import {
 } from 'react-router-dom'
 import Login from './Public/Main'
 import Home from './App/Home'
+import AboutUs from './App/AboutUs'
 
 @inject('store')
 @observer
@@ -31,6 +32,7 @@ export default class App extends Component {
     } else {
       routes = <Switch>
         <Route exact path='/' component={Home} />
+        <Route exact path='/about-us' component={AboutUs} />
         <Redirect to='/' />
       </Switch>
     }
